@@ -1,0 +1,14 @@
+# config.yaml
+
+model_name: facebook/bart-base
+max_input_length: 1024
+max_target_length: 128
+batch_size: 8
+epochs: 3
+lr: 0.00003
+weight_decay: 0.01
+warmup_steps: 500
+early_stopping_patience: 2
+output_dir: ../model
+device: cuda
+gradient_accumulation_steps: 4

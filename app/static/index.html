@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Summarization</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        textarea { width: 100%; height: 150px; padding: 1rem; font-size: 1rem; }
+        button { padding: 0.5rem 1rem; margin-top: 1rem; font-size: 1rem; }
+        #result { margin-top: 2rem; font-weight: bold; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Text Summarization</h1>
+    <form id="summarize-form">
+        <textarea id="input-text" placeholder="Paste your article here..."></textarea>
+        <br>
+        <button type="submit">Summarize</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('summarize-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const text = document.getElementById('input-text').value;
+            const response = await fetch('/summarize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: text })
+            });
+            const data = await response.json();
+            document.getElementById('result').innerText = data.summary;
+        });
+    </script>
+</body>
+</html>
