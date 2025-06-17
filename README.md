@@ -97,7 +97,7 @@ Returns:
 
 ## 📈 ROUGE Scores
 
-Using `facebook/bart-base` fine‑tuned on CNN/DailyMail (100000 size subsample):
+Using `facebook/bart-base` fine‑tuned on CNN/DailyMail (100000 size subsample): <br>
 ROUGE‑1 (F₁): ≈ 41.23 <br>
 ROUGE‑2 (F₁): ≈ 19.56 <br>
 ROUGE‑L (F₁): ≈ 38.97 <br>
