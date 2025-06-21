@@ -9,7 +9,6 @@ import os
 
 enabled_device = "cuda" if torch.cuda.is_available() else "cpu"
 
-
 class SummarizationRequest(BaseModel):
     text: str
     max_length: int = 128

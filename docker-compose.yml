@@ -11,12 +11,13 @@ services:
       - ./model:/app/model
     expose:
       - "8000"
-      
-    runtime: nvidia
-    devices:
-      - /dev/nvidia0
-      - /dev/nvidiactl
-      - /dev/nvidia-uvm
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
   nginx:
     image: nginx:alpine

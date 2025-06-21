@@ -18,4 +18,4 @@ ENV PORT=8000
 
 EXPOSE 8000
 
-CMD ["uvicorn", "fastapi_summarization_app:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "5"]
+CMD ["uvicorn", "summarization_app:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "5"]
