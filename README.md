@@ -59,7 +59,7 @@ python train_bart_summarization.py --config config.yaml
 ### Start the app locally:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 The summarization API will be available at [http://localhost](http://localhost).
