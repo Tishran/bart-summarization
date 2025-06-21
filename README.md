@@ -47,7 +47,7 @@ You can train the model using the script in `training/train.py`:
 ```bash
 cd training
 pip install -r requirements.txt
-python train.py --config config.yaml
+python train_bart_summarization.py --config config.yaml
 ```
 
 ✅ Logs and metrics are tracked via [Weights & Biases](https://wandb.ai/). Early stopping is applied based on validation loss.
